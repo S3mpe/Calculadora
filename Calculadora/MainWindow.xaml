@@ -6,6 +6,14 @@
         xmlns:local="clr-namespace:Calculadora"
         mc:Ignorable="d"
         Title="Calculadora" Height="550" Width="450" MinHeight="350" MinWidth="250" Icon="128.ico">
+	<Window.Resources>
+		<Style TargetType="{x:Type Button}">
+			<Setter Property="Margin" Value="6"/>
+		</Style>
+		<Style TargetType="{x:Type Label}">
+			<Setter Property="FontSize" Value="100"/>
+		</Style>
+	</Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition MinHeight="50"></RowDefinition>
@@ -22,56 +30,56 @@
         </Grid.ColumnDefinitions>
         <Border Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="3"  BorderThickness="1" BorderBrush="Black"  Margin="6">
             <Viewbox x:Name="ContenidoViewBox" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="3" HorizontalAlignment="Right">
-                <Label x:Name="EntradaTextBox"  FontSize="100"></Label>
+                <Label x:Name="EntradaTextBox" ></Label>
             </Viewbox>
         </Border>
-        <Button x:Name="NumeroUnoButton" Grid.Column="0" Grid.Row="2" Margin="6" Click="Button_Click" Tag="1">
+        <Button x:Name="NumeroUnoButton" Grid.Column="0" Grid.Row="2" Click="Button_Click" Tag="1">
             <Viewbox>
-                <Label FontSize="100">1</Label>
+                <Label>1</Label>
             </Viewbox>
         </Button>
-        <Button x:Name="NumeroDosButton" Grid.Column="1" Grid.Row="2" Margin="6" Click="Button_Click" Tag="2">
+        <Button x:Name="NumeroDosButton" Grid.Column="1" Grid.Row="2" Click="Button_Click" Tag="2">
             <Viewbox>
-                <Label FontSize="100">2</Label>
+                <Label >2</Label>
             </Viewbox>
         </Button>
-        <Button x:Name="NumeroTresButton" Grid.Column="2" Grid.Row="2" Margin="6" Click="Button_Click" Tag="3">
+        <Button x:Name="NumeroTresButton" Grid.Column="2" Grid.Row="2"  Click="Button_Click" Tag="3">
             <Viewbox>
-                <Label FontSize="100">3</Label>
+                <Label >3</Label>
             </Viewbox>
         </Button>
-        <Button x:Name="NumeroCuatroButton" Grid.Column="0" Grid.Row="3" Margin="6" Click="Button_Click" Tag="4">
+        <Button x:Name="NumeroCuatroButton" Grid.Column="0" Grid.Row="3"  Click="Button_Click" Tag="4">
             <Viewbox>
-                <Label FontSize="100">4</Label>
+                <Label >4</Label>
             </Viewbox>
         </Button>
-        <Button x:Name="NumeroCincoButton" Grid.Column="1" Grid.Row="3" Margin="6" Click="Button_Click" Tag="5">
+        <Button x:Name="NumeroCincoButton" Grid.Column="1" Grid.Row="3"  Click="Button_Click" Tag="5">
             <Viewbox>
-                <Label FontSize="100">5</Label>
+                <Label >5</Label>
             </Viewbox>
         </Button>
-        <Button x:Name="NumeroSeisButton" Grid.Column="2" Grid.Row="3" Margin="6" Click="Button_Click" Tag="6">
+        <Button x:Name="NumeroSeisButton" Grid.Column="2" Grid.Row="3"  Click="Button_Click" Tag="6">
             <Viewbox>
-                <Label FontSize="100">6</Label>
+                <Label >6</Label>
             </Viewbox>
         </Button>
-        <Button x:Name="NumeroSieteButton" Grid.Column="0" Grid.Row="4" Margin="6" Click="Button_Click" Tag="7">
+        <Button x:Name="NumeroSieteButton" Grid.Column="0" Grid.Row="4"  Click="Button_Click" Tag="7">
             <Viewbox>
-                <Label FontSize="100">7</Label>
+                <Label >7</Label>
             </Viewbox>
         </Button>
-        <Button x:Name="NumeroOchoButton" Grid.Column="1" Grid.Row="4" Margin="6" Click="Button_Click" Tag="8">
+        <Button x:Name="NumeroOchoButton" Grid.Column="1" Grid.Row="4"  Click="Button_Click" Tag="8">
             <Viewbox>
-                <Label FontSize="100">8</Label>
+                <Label >8</Label>
             </Viewbox>
         </Button>
-        <Button x:Name="NumeroNueveButton" Grid.Column="2" Grid.Row="4" Margin="6" Click="Button_Click" Tag="9">
+        <Button x:Name="NumeroNueveButton" Grid.Column="2" Grid.Row="4"  Click="Button_Click" Tag="9">
             <Viewbox>
-                <Label FontSize="100">9
+                <Label >9
                 </Label>
             </Viewbox>
         </Button>
 
-        <Button x:Name="NumeroCeroButton" Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="3" Margin="5" Click="Button_Click" Tag="0" FontSize="25">0</Button>
+        <Button x:Name="NumeroCeroButton" Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="3"  Click="Button_Click" Tag="0" FontSize="25">0</Button>
     </Grid>
 </Window>
