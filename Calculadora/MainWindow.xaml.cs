@@ -23,73 +23,36 @@ namespace Calculadora
         public MainWindow()
         {
             InitializeComponent();
-            Button numero1 = new Button
+            TextBlock numeroVisualizado;
+            Viewbox contenedor;
+            Button boton;
+            int valor = 0;
+            for (int filas = 2; filas < 5; filas++)
             {
-                Content = "1",
-            Style = (Style)this.Resources["botones"]
-            };
-            Button numero2 = new Button
-            {
-                Content = "2",
-                Style = (Style)this.Resources["botones"]
-            };
-            Button numero3 = new Button
-            {
-                Content = "3",
-                Style = (Style)this.Resources["botones"]
-            };
-            Button numero4 = new Button
-            {
-                Content = "4",
-                Style = (Style)this.Resources["botones"]
-            };
-            Button numero5 = new Button
-            {
-                Content = "5",
-                Style = (Style)this.Resources["botones"]
-            };
-            Button numero6 = new Button
-            {
-                Content = "6",
-                Style = (Style)this.Resources["botones"]
-            };
-            Button numero7 = new Button
-            {
-                Content = "7",
-                Style = (Style)this.Resources["botones"]
-            };
-            Button numero8 = new Button
-            {
-                Content = "8",
-                Style = (Style)this.Resources["botones"]
-            };
-            Button numero9 = new Button
-            {
-                Content = "9",
-                Style = (Style)this.Resources["botones"]
-            };
-            Button numero0 = new Button
-            {
-                Content = "0",
-                Style = (Style)this.Resources["botones"]
-            };
-            numero1.Click += Button_Click;
-            numero2.Click += Button_Click;
-            numero3.Click += Button_Click;
-            numero4.Click += Button_Click;
-            numero5.Click += Button_Click;
-            numero6.Click += Button_Click;
-            numero7.Click += Button_Click;
-            numero8.Click += Button_Click;
-            numero9.Click += Button_Click;
-            numero0.Click += Button_Click;
-        }
+                for (int columnas = 0; columnas < 3; columnas++)
+                {
+                    valor++;
+                    numeroVisualizado = new TextBlock
+                    {
+                        Text = valor.ToString()
+                    };
+                    contenedor = new Viewbox
+                    {
+                        Child = numeroVisualizado
+                    };
+                    boton = new Button
+                    {
+                        Content = contenedor,
+                        Tag = valor.ToString()
+                    };
+                    this.Calculadora.Children.Add(boton);
+                    Grid.SetRow(boton, filas);
+                    Grid.SetColumn(boton, columnas);
+                }
+            }
 
-        private void Numero1_Click(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
+         
         }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Button informacionBoton = (Button)sender;
